@@ -52,6 +52,7 @@ endif ()
 
 # Create the libraries with these header and source files
 add_library( anyrpc ${ANYRPC_LIB_TYPE} ${ANYRPC_SOURCES} ${ANYRPC_HEADERS} )
+add_library( AnyRPC::anyrpc ALIAS anyrpc )
 target_link_libraries( anyrpc ${ASAN_LIBRARY} ${LOG4CPLUS_LIBRARIES})
 target_include_directories( anyrpc PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../include )
 
