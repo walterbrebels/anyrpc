@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 Project(AnyRPC CXX)
 
 # Some of the cmake find_package files are part of this distribution
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 # Read out version from "version" file
 file(STRINGS "version" ANYRPC_VERSION_FILE)
@@ -48,7 +48,7 @@ set_property(CACHE ANYRPC_THROW PROPERTY STRINGS assert throw)
 set(INCLUDE_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "The directory the headers are installed in")
 set(LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE STRING "Directory where lib will install")
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(ANYRPC_INCLUDE_JSON ${BUILD_PROTOCOL_JSON})
 set(ANYRPC_INCLUDE_XML ${BUILD_PROTOCOL_XML})

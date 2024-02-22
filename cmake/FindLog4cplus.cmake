@@ -17,7 +17,7 @@ if (WIN32)
 	
 	# Find the header directory
 	find_path(LOG4CPLUS_INCLUDE_DIR log4cplus/logger.h
-	  	HINTS ${CMAKE_SOURCE_DIR}/../log4cplus/include)
+	  	HINTS ${CMAKE_CURRENT_SOURCE_DIR}/../log4cplus/include)
 	
 	# Find the release library 
   	find_library(LOG4CPLUS_LIBRARY_RELEASE log4cplus

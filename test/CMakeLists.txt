@@ -60,4 +60,4 @@ target_link_libraries( testAnyRPC anyrpc ${ASAN_LIBRARY} ${LOG4CPLUS_LIBRARIES} 
 # Copy the sample files to the build directory in folder named sample
 add_custom_command(TARGET testAnyRPC POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E copy_directory
-                       ${CMAKE_SOURCE_DIR}/test/sample $<TARGET_FILE_DIR:testAnyRPC>/sample)
+                       ${CMAKE_CURRENT_SOURCE_DIR}/test/sample $<TARGET_FILE_DIR:testAnyRPC>/sample)

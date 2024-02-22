@@ -17,7 +17,7 @@ if (WIN32)
 	
 	# Find the header directory
 	find_path(MSGPACK_INCLUDE_DIR msgpack.h
-	  	HINTS ${CMAKE_SOURCE_DIR}/../msgpack-c/include)
+	  	HINTS ${CMAKE_CURRENT_SOURCE_DIR}/../msgpack-c/include)
 	
 	# Find the release library 
   	find_library(MSGPACK_LIBRARY_RELEASE msgpack
